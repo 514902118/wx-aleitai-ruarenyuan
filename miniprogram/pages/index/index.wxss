@@ -1,0 +1,5 @@
+/* pages/index/index.wxss */
+.weui-input{padding: 0 30rpx;}
+.picker{padding-left: 16px;}
+.weui-btn-area button{ width:100%; background-color: #053eb0; }
+.index-box{ background: #fff; padding: 20rpx; border-radius: 40rpx; margin-top: 40rpx;}

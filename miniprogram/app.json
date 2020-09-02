@@ -1,0 +1,20 @@
+{
+    "pages": [
+        "pages/start/index",
+        "pages/index/index",
+        "pages/ScanCode/index",
+        "pages/qrCode/index"
+    ],
+    "useExtendedLib": {
+        "weui": true
+    },
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#053eb0",
+        "navigationBarTitleText": "入阿人员",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

@@ -1,0 +1,19 @@
+<!--pages/start/index.wxml-->
+<image class="topbj" src="{{src}}" />
+<view class="start-box">
+	<view class="start-cont">
+			<button data-type="1" class="start-btn" name="{{ phoneNumber }}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+				<image class="img" src="../../images/01.png" />
+				抵阿信息登记
+			</button>
+
+		<button data-type="2" class="start-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+				<image class="img" src="../../images/02.png" />
+				信息扫码核验
+			</button>
+
+		<view class="clear" />
+
+	</view>
+</view>
+

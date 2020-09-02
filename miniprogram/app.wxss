@@ -1,0 +1,4 @@
+/**app.wxss**/
+.topbj{ position: fixed; left: 0; top: -88rpx; width: 100%; z-index: 0;}
+.start-box{ position:absolute; top: 200rpx; left: 0; z-index: 1000; margin: 0; padding: 0;width: 100%; }
+.clear{ clear: both; font-size: 0; content: ''; width: 100%; }

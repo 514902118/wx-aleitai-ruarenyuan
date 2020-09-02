@@ -1,0 +1,66 @@
+
+<image class="topbj" src="{{src}}" />
+<view class="start-box ">
+	<view class="index-box">
+		<mp-form id="form">
+			<mp-cells title="旅客信息登记表">
+				<mp-cell prop="credentialsTypeIndex">
+					<view class="weui-cells__title">证件类型</view>
+          	<view wx:if="{{credentialsType == 0}}" class="picker {{clas}}">身份证</view>
+          	<view wx:if="{{credentialsType == 1}}" class="picker {{clas}}">护照</view>
+          	<view wx:else="{{credentialsType == 2}}" class="picker {{clas}}">其他</view>
+				</mp-cell>
+				<mp-cell prop="idCard">
+					<view class="weui-cells__title">证件号码</view>
+					<input
+					 data-field="idCard"
+					 bindinput="formInputChange"
+					 class="weui-input"
+           value="{{ idCard }}"
+					 placeholder="请输入证件号码"
+					/>
+				</mp-cell>
+				<mp-cell prop="userName">
+					<view class="weui-cells__title">姓名</view>
+					<input
+					 data-field="userName"
+					 bindinput="formInputChange"
+					 class="weui-input"
+           value="{{ userName }}"
+					 placeholder="请输入姓名"
+					/>
+				</mp-cell>
+				<mp-cell prop="phoneNumber">
+					<view class="weui-cells__title">手机号</view>
+					<view class="picker {{clas}}">{{ phoneNumber }}</view>
+				</mp-cell>
+				<mp-cell prop="trafficType">
+					<view class="weui-cells__title">来乌方式</view>
+					<view wx:if="{{trafficType == 0}}" class="picker {{clas}}">火车</view>
+          <view wx:else="{{trafficType == 1}}" class="picker {{clas}}">飞机</view>
+				</mp-cell>
+				<mp-cell prop="departure">
+					<view class="weui-cells__title">出发地</view>
+					<view class="picker {{clas}}">{{departure}}</view>
+				</mp-cell>
+				<mp-cell prop="destination">
+					<view class="weui-cells__title">目的地</view>
+					<view class="picker {{clas}}">{{destination}}</view>
+				</mp-cell>
+				<mp-cell prop="arrivalTime">
+					<view class="weui-cells__title">抵达日期</view>
+					<view class="weui-input">{{arrivalTime}}</view>
+				</mp-cell>
+				<mp-cell prop="registerTime">
+					<view class="weui-cells__title">登记时间</view>
+					<view class="weui-input">{{registerTime}}</view>
+				</mp-cell>
+				<mp-cell prop="backup_1">
+					<view class="weui-cells__title">过去14天是否到过以下地区</view>
+					<view class="weui-select">{{backup_1[backupArry]}}</view>
+				</mp-cell>
+			</mp-cells>
+		</mp-form>
+	</view>
+</view>
+

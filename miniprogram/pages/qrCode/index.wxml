@@ -1,0 +1,22 @@
+<image class="topbj" src="{{src}}" />
+<view class="start-box ">
+	<view class="box">
+			<!---<canvas canvas-id='qrcode' style="width:400rpx; height:400rpx; margin: 100rpx auto; margin-bottom:40rpx;" />--->
+			<image class="codeStyle" src='{{src2}}'></image>
+		<view class="text-box">
+			<view class="text-style">
+				姓名:
+				<text class="text">{{ userName }}</text>
+			</view>
+			<view class="text-style">
+				身份证号:
+				<text class="text">{{ idCard }}</text>
+			</view>
+		</view>
+	</view>
+	<view class="weui-btn-area" bindtap="backHome">
+		<button type="primary" >返回首页</button>
+	</view>
+
+</view>
+
