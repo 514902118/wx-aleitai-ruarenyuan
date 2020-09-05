@@ -8,13 +8,14 @@ cloud.init({
 // 云函数入口函数
 exports.main = async (event) => {
     var rp = require('request-promise');
-    let { arrivalTime, backup1,trafficType, credentialsType,registerTime, departure, destination, idCard, isAgree, phoneNumber, userName } = event;
+    let { arrivalTime, backup1, backup2, trafficType, credentialsType,registerTime, departure, destination, idCard, isAgree, phoneNumber, userName } = event;
     var options = {
         method: 'POST',
         uri: 'http://39.105.58.173:18082/system/info/addUserSave',
         body: {
             arrivalTime,
             backup1,
+            backup2,
             credentialsType,
             departure,
             destination,

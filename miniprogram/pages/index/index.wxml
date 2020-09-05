@@ -12,32 +12,15 @@
 				</mp-cell>
 				<mp-cell prop="idCard">
 					<view class="weui-cells__title">证件号码</view>
-					<input
-					 data-field="idCard"
-					 bindinput="formInputChange"
-					 class="weui-input"
-					 placeholder="请输入证件号码"
-					/>
+					<input data-field="idCard" bindinput="formInputChange" class="weui-input" placeholder="请输入证件号码" />
 				</mp-cell>
 				<mp-cell prop="userName">
 					<view class="weui-cells__title">姓名</view>
-					<input
-					 data-field="userName"
-					 bindinput="formInputChange"
-					 class="weui-input"
-					 placeholder="请输入姓名"
-					/>
+					<input data-field="userName" bindinput="formInputChange" class="weui-input" placeholder="请输入姓名" />
 				</mp-cell>
 				<mp-cell prop="phoneNumber">
 					<view class="weui-cells__title">手机号</view>
-					<input
-					 data-field="phoneNumber"
-					 bindinput="formInputChange"
-					 class="weui-input"
-					 placeholder="请输入手机号"
-					 value="{{ phoneNumber }}"
-					 disabled="disabled"
-					/>
+					<input data-field="phoneNumber" bindinput="formInputChange" class="weui-input" placeholder="请输入手机号" value="{{ phoneNumber }}" disabled="disabled" />
 				</mp-cell>
 				<mp-cell prop="trafficType">
 					<view class="weui-cells__title">来阿方式</view>
@@ -59,57 +42,31 @@
 				</mp-cell> -->
 				<mp-cell prop="departure">
 					<view class="weui-cells__title">出发地</view>
-					<picker
-					 mode="region"
-					 bindchange="bindDepartureChange"
-					 value="{{departure}}"
-					 custom-item="{{customItem}}"
-					 name="{{departure}}"
-					>
+					<picker mode="region" bindchange="bindDepartureChange" value="{{departure}}" custom-item="{{customItem}}" name="{{departure}}">
 						<view class="picker {{clas}}">{{departure}}</view>
 					</picker>
 				</mp-cell>
-
-
-
+				<mp-cell prop="backup2">
+					<view class="weui-cells__title">途经地</view>
+					<input data-field="backup2" bindinput="formInputChange" class="weui-input" placeholder="请输入途经地" />
+				</mp-cell>
 				<mp-cell prop="destination">
 					<view class="weui-cells__title">目的地</view>
-
-					<picker
-					 mode="multiSelector"
-					 bindchange="bindRegionChange"
-					 value="{{destinationArry}}"
-					 custom-item="{{customItem}}"
-					 range="{{destination}}"
-					>
+					<picker mode="multiSelector" bindchange="bindRegionChange" value="{{destinationArry}}" custom-item="{{customItem}}" range="{{destination}}">
 						<view class="picker {{clas}}">
-						{{destination[0][destinationArry[0]]}}，{{destination[1][destinationArry[1]]}}
+							{{destination[0][destinationArry[0]]}}，{{destination[1][destinationArry[1]]}}
 						</view>
 					</picker>
 				</mp-cell>
 				<mp-cell prop="arrivalTime">
 					<view class="weui-cells__title">抵达日期</view>
-					<picker
-					 data-field="arrivalTime"
-					 mode="date"
-					 value="{{arrivalTime}}"
-					 start="2020-01-01"
-					 end="2080-01-01"
-					 bindchange="bindDateChange"
-					>
+					<picker data-field="arrivalTime" mode="date" value="{{arrivalTime}}" start="2020-01-01" end="2080-01-01" bindchange="bindDateChange">
 						<view class="weui-input">{{arrivalTime}}</view>
 					</picker>
 				</mp-cell>
 				<mp-cell prop="registerTime">
 					<view class="weui-cells__title">登记时间</view>
-					<picker
-					 data-field="registerTime"
-					 mode="date"
-					 value="{{registerTime}}"
-					 start="2020-01-01"
-					 end="2080-01-01"
-					 bindchange="bindRegisterTimeChange"
-					>
+					<picker data-field="registerTime" mode="date" value="{{registerTime}}" start="2020-01-01" end="2080-01-01" bindchange="bindRegisterTimeChange">
 						<view class="weui-input">{{registerTime}}</view>
 					</picker>
 				</mp-cell>
@@ -125,10 +82,8 @@
 			<label class="weui-agree" for="weuiAgree">
 				<view class="weui-agree__text">
 					<label class="checkbox">
-					<checkbox  id="weuiAgree"
-					 value="agree"
-					 checked="{{isAgree}}"/>选中
-				</label>
+						<checkbox id="weuiAgree" value="agree" checked="{{isAgree}}" />选中
+					</label>
 					本人承诺：以上所有填写内容真实，完整，如有虚假，由本人承担一切责任
 				</view>
 			</label>
@@ -138,4 +93,3 @@
 		</view>
 	</view>
 </view>
-
