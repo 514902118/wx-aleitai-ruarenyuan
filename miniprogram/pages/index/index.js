@@ -37,6 +37,9 @@ Component({
     registerTime: '请选择登记时间',//登记时间
     backupArry: 0,
     backup1: ['无'], //过去14天是否到过以下地区
+    backup3: '',//车次/航班/车牌号
+    backup3title:"车次",
+    backup4: '请输入座位号',//座位号
     isAgree: false, //本人承诺
     //验证规则
     rules: [
@@ -67,6 +70,12 @@ Component({
       }, {
         name: 'trafficType',
         rules: [{ required: true, message: '请选择来乌方式' }],
+      }, {
+        name: 'backup3',
+        rules: [{ required: true, message: '请输入车次/航班/车牌号' }],
+      }, {
+        name: 'backup4',
+        rules: [{ required: true, message: '请输入座位号' }],
       }, {
         name: 'departure',
         rules: { required: true, message: '请选择出发地' },
@@ -110,8 +119,16 @@ Component({
      * @param {*} e 
      */
     bindTrafficTypeChange: function (e) {
+      console.log(e);
+      var bakuparry = {
+        '0':'车次',
+        '1':'航班号',
+        '2':'车牌号'
+        }
+      console.log(bakuparry[e.detail.value]);
       this.setData({
         trafficTypeIndex: e.detail.value,
+        backup3title: bakuparry[e.detail.value],
         [`formData.trafficType`]: e.detail.value
       })
     },

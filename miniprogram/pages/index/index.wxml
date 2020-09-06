@@ -28,12 +28,15 @@
 						<view class="weui-select">{{trafficType[trafficTypeIndex]}}</view>
 					</picker>
 				</mp-cell>
+					<mp-cell prop="backup3">
+						<view class="weui-cells__title">{{backup3title}}</view>
+						<input data-field="backup3" bindinput="formInputChange" class="weui-input" placeholder="请输入{{backup3title}}" />
+					</mp-cell>
+					<mp-cell prop="backup4">
+						<view class="weui-cells__title">座位号</view>
+						<input data-field="backup4" bindinput="formInputChange" class="weui-input" placeholder="请输入座位号" />
+					</mp-cell>
 				<!---
-              <mp-cell prop="trafficType">
-                <view class="weui-cells__title">车次</view>
-                <input data-field="trafficType" bindinput="formInputChange" class="weui-input" placeholder="请输入车次" />
-              </mp-cell>
-           
 				<mp-cell prop="departure">
 					<view class="weui-cells__title">出发地</view>
 					<picker  bindchange="bindDepartureChange"  range="{{departure}}">

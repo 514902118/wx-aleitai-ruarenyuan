@@ -37,11 +37,23 @@
 				<mp-cell prop="trafficType">
 					<view class="weui-cells__title">来乌方式</view>
 					<view wx:if="{{trafficType == 0}}" class="picker {{clas}}">火车</view>
-          <view wx:else="{{trafficType == 1}}" class="picker {{clas}}">飞机</view>
+          <view wx:if="{{trafficType == 1}}" class="picker {{clas}}">飞机</view>
+          <view wx:else="{{trafficType == 2}}" class="picker {{clas}}">乘车</view>
+				</mp-cell>
+				<mp-cell prop="backup3">
+					<view class="weui-cells__title" wx:if="{{trafficType == 0}}" >车次</view>
+          <view class="weui-cells__title" wx:if="{{trafficType == 1}}" >航班号</view>
+					<view class="weui-cells__title" wx:else="{{trafficType == 2}}">火车</view>
+          <view class="picker {{clas}}">{{backup3}}</view>
+
 				</mp-cell>
 				<mp-cell prop="departure">
 					<view class="weui-cells__title">出发地</view>
 					<view class="picker {{clas}}">{{departure}}</view>
+				</mp-cell>
+				<mp-cell prop="backup2">
+					<view class="weui-cells__title">途经地</view>
+					<view class="picker {{clas}}">{{backup2}}</view>
 				</mp-cell>
 				<mp-cell prop="destination">
 					<view class="weui-cells__title">目的地</view>
