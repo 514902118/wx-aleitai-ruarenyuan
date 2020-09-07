@@ -1,7 +1,7 @@
 /* pages/start/index.wxss */
-
+.start-box {top:330rpx;}
 .start-box .start-cont{ padding:0 20rpx; }
-.start-box .start-cont .start-btn{padding: 0; width: 100%; border: 1rpx solid #eee; background: #fff; box-shadow: 0px 2px 4px #eee; margin-top: 20px; text-align: center; height: 200rpx; line-height: 200rpx;border:1rpx solid #eee; border-radius: 20rpx; position: relative; font-size: 40rpx;}
+.start-box .start-cont .start-btn{padding: 0; width: 100%; border: 1rpx solid #eee; background: #fff; box-shadow: 0px 2px 4px #eee; margin-top: 20px; text-align: center; height: 220rpx; line-height: 220rpx;border:1rpx solid #eee; border-radius: 20rpx; position: relative; font-size: 40rpx;}
 .start-box .start-cont .img{ width: 120rpx;height: 120rpx; border-radius: 120rpx; position: absolute;
 left: 50rpx; top:50%; margin-top: -60rpx;
 }
