@@ -11,7 +11,7 @@ exports.main = async (event) => {
     let { arrivalTime, backup1, backup2, backup3, backup4, trafficType, credentialsType,registerTime, departure, destination, idCard, isAgree, phoneNumber, userName } = event;
     var options = {
         method: 'POST',
-        uri: 'http://39.105.58.173:18082/system/info/addUserSave',
+        uri: 'http://106.124.136.211:18082/system/info/addUserSave',
         body: {
             arrivalTime,
             backup1,

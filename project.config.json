@@ -18,7 +18,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "useMultiFrameRuntime": false,
-    "useApiHook": true,
+    "useApiHook": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -31,7 +31,7 @@
     "packNpmManually": false,
     "packNpmRelationList": []
   },
-  "appid": "wx9d407701138f3a25",
+  "appid": "wxa2d876c16d4581a2",
   "projectname": "%E8%BF%9B%E5%87%BA%E4%B9%8C%E4%BA%BA%E5%91%98%E6%8C%87%E5%BC%95",
   "libVersion": "2.8.1",
   "simulatorType": "wechat",
