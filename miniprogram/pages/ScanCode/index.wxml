@@ -47,6 +47,10 @@
           <view class="picker {{clas}}">{{backup3}}</view>
 
 				</mp-cell>
+				<mp-cell prop="backup5">
+						<view class="weui-cells__title">来阿目的</view>
+					<view class="picker {{clas}}">{{backup5}}</view>
+					</mp-cell>
 				<mp-cell prop="departure">
 					<view class="weui-cells__title">出发地</view>
 					<view class="picker {{clas}}">{{departure}}</view>
@@ -64,7 +68,7 @@
 					<view class="weui-input">{{arrivalTime}}</view>
 				</mp-cell>
 				<mp-cell prop="registerTime">
-					<view class="weui-cells__title">登记时间</view>
+					<view class="weui-cells__title">填报时间</view>
 					<view class="weui-input">{{registerTime}}</view>
 				</mp-cell>
 				<mp-cell prop="backup_1">

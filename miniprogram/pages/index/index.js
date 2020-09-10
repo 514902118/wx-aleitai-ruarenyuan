@@ -40,6 +40,8 @@ Component({
     backup3: '',//车次/航班/车牌号
     backup3title:"车次",
     backup4: '请输入座位号',//座位号
+    backup5: ['回家', '办事', '旅游', '其他'],//来阿目的
+    backup5Index: 0,//来阿目的索引
     isAgree: false, //本人承诺
     //验证规则
     rules: [
@@ -77,6 +79,9 @@ Component({
         name: 'backup4',
         rules: [{ required: true, message: '请输入座位号' }],
       }, {
+        name: 'backup5',
+        rules: { required: true, message: '请选择来阿目的' },
+      }, {
         name: 'departure',
         rules: { required: true, message: '请选择出发地' },
       }, {
@@ -96,7 +101,8 @@ Component({
       trafficType: '0',
       backup1: '北京',
       isAgree: true,
-      registerTime: '2017-08-01'
+      registerTime: '2017-08-01',
+      backup5:'回家'
       
     }
   },
@@ -130,7 +136,28 @@ Component({
         trafficTypeIndex: e.detail.value,
         backup3title: bakuparry[e.detail.value],
         [`formData.trafficType`]: e.detail.value
-      })
+      });
+    },
+
+    /**
+     * 来阿目的
+     * @param {*} e 
+     */
+    bindbackup5Change(e){
+      console.log(e);
+      var bakup5arry = {
+        '0': '回家',
+        '1': '办事',
+        '2': '旅游',
+        '3':'其他'
+      }
+     
+      this.setData({
+        backup5Index: e.detail.value,
+        [`formData.backup5`]: bakup5arry[e.detail.value]
+      });
+      console.log(bakup5arry[e.detail.value]);
+      console.log(this.data.formData.backup5);
     },
 
     /**

@@ -10,7 +10,7 @@ exports.main = async (event) => {
     var rp = require('request-promise');
     var options = {
         method: 'POST',
-        uri: 'http://106.124.136.211:18082/system/location/locationList',
+        uri: 'http://39.105.58.173:18082/system/location/locationList',
         body: {},
         json: true
     };

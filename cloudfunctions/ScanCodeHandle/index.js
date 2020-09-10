@@ -11,7 +11,7 @@ exports.main = async (event) => {
     let { phoneNumber } = event;
     var options = {
         method: 'POST',
-        uri: 'http://106.124.136.211:18082/system/info/byPhone',
+        uri: 'http://39.105.58.173:18082/system/info/byPhone',
         body: {
             phoneNumber
         },

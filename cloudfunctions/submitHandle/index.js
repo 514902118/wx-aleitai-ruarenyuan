@@ -8,16 +8,33 @@ cloud.init({
 // 云函数入口函数
 exports.main = async (event) => {
     var rp = require('request-promise');
-    let { arrivalTime, backup1, backup2, backup3, backup4, trafficType, credentialsType,registerTime, departure, destination, idCard, isAgree, phoneNumber, userName } = event;
+    let {
+        arrivalTime,
+        backup1,
+        backup2,
+        backup3,
+        backup4,
+        backup5,
+        trafficType,
+        credentialsType,
+        registerTime,
+        departure,
+        destination,
+        idCard,
+        isAgree,
+        phoneNumber,
+        userName
+    } = event;
     var options = {
         method: 'POST',
-        uri: 'http://106.124.136.211:18082/system/info/addUserSave',
+        uri: 'http://39.105.58.173:18082/system/info/addUserSave',
         body: {
             arrivalTime,
             backup1,
             backup2,
             backup3,
             backup4,
+            backup5,
             credentialsType,
             departure,
             destination,
@@ -33,8 +50,8 @@ exports.main = async (event) => {
     // const wxContext = cloud.getWXContext()
 
     return rp(options).then(function (parsedBody) {
-        return parsedBody
-    })
+            return parsedBody
+        })
         .catch(function (err) {
             return err
         });

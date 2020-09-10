@@ -28,6 +28,7 @@
 						<view class="weui-select">{{trafficType[trafficTypeIndex]}}</view>
 					</picker>
 				</mp-cell>
+				
 					<mp-cell prop="backup3">
 						<view class="weui-cells__title">{{backup3title}}</view>
 						<input data-field="backup3" bindinput="formInputChange" class="weui-input" placeholder="请输入{{backup3title}}" />
@@ -36,13 +37,19 @@
 						<view class="weui-cells__title">座位号</view>
 						<input data-field="backup4" bindinput="formInputChange" class="weui-input" placeholder="请输入座位号" />
 					</mp-cell>
-				<!---
-				<mp-cell prop="departure">
-					<view class="weui-cells__title">出发地</view>
-					<picker  bindchange="bindDepartureChange"  range="{{departure}}">
-						<view class="weui-select">{{departure[departureArry]}}</view>
-					</picker>
-				</mp-cell> -->
+					<!---
+					<mp-cell prop="departure">
+						<view class="weui-cells__title">出发地</view>
+						<picker  bindchange="bindDepartureChange"  range="{{departure}}">
+							<view class="weui-select">{{departure[departureArry]}}</view>
+						</picker>
+					</mp-cell> -->
+					<mp-cell prop="backup5">
+						<view class="weui-cells__title">来阿目的</view>
+						<picker bindchange="bindbackup5Change" value="{{backup5Index}}" range="{{backup5}}">
+							<view class="weui-select">{{backup5[backup5Index]}}</view>
+						</picker>
+					</mp-cell>
 				<mp-cell prop="departure">
 					<view class="weui-cells__title">出发地</view>
 					<picker mode="region" bindchange="bindDepartureChange" value="{{departure}}" custom-item="{{customItem}}" name="{{departure}}">
@@ -68,7 +75,7 @@
 					</picker>
 				</mp-cell>
 				<mp-cell prop="registerTime">
-					<view class="weui-cells__title">登记时间</view>
+					<view class="weui-cells__title">填报时间</view>
 					<picker data-field="registerTime" mode="date" value="{{registerTime}}" start="2020-01-01" end="2080-01-01" bindchange="bindRegisterTimeChange">
 						<view class="weui-input">{{registerTime}}</view>
 					</picker>
